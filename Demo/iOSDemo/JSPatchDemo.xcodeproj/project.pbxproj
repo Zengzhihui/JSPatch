@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263119F11CB9468D00B459EF /* JSPatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 263119F01CB9468D00B459EF /* JSPatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		263119F51CB9468D00B459EF /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263119EE1CB9468D00B459EF /* JSPatch.framework */; };
+		263119F61CB9468D00B459EF /* JSPatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 263119EE1CB9468D00B459EF /* JSPatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D0DF7071B22F75C005695DA /* inheritTest.js in Resources */ = {isa = PBXBuildFile; fileRef = 2D0DF7061B22F75C005695DA /* inheritTest.js */; };
 		2D5D89211B0B8BFF009382EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D89181B0B8BFF009382EC /* AppDelegate.m */; };
 		2D5D89251B0B8BFF009382EC /* JPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D891E1B0B8BFF009382EC /* JPViewController.m */; };
@@ -62,6 +65,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		263119F31CB9468D00B459EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE94AE031AF246BF00E461D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 263119ED1CB9468D00B459EF;
+			remoteInfo = JSPatch;
+		};
 		DE94AE251AF246C000E461D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE94AE031AF246BF00E461D4 /* Project object */;
@@ -71,7 +81,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		263119FA1CB9468D00B459EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				263119F61CB9468D00B459EF /* JSPatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		263119EE1CB9468D00B459EF /* JSPatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSPatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		263119F01CB9468D00B459EF /* JSPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPatch.h; sourceTree = "<group>"; };
+		263119F21CB9468D00B459EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0DF7061B22F75C005695DA /* inheritTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = inheritTest.js; sourceTree = "<group>"; };
 		2D5D89171B0B8BFF009382EC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D5D89181B0B8BFF009382EC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,10 +191,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		263119EA1CB9468D00B459EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94AE081AF246BF00E461D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263119F51CB9468D00B459EF /* JSPatch.framework in Frameworks */,
 				36F0DCC61BFAF41C0090EA4A /* libz.1.dylib in Frameworks */,
 				DE58B6481B7C312800F64C63 /* JavaScriptCore.framework in Frameworks */,
 			);
@@ -183,6 +218,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263119EF1CB9468D00B459EF /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				263119F01CB9468D00B459EF /* JSPatch.h */,
+				263119F21CB9468D00B459EF /* Info.plist */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
 		2D5D89161B0B8BFF009382EC /* JSPatchDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +377,7 @@
 				DE58B6471B7C312800F64C63 /* JavaScriptCore.framework */,
 				2D5D89161B0B8BFF009382EC /* JSPatchDemo */,
 				DE94AE271AF246C000E461D4 /* JSPatchTests */,
+				263119EF1CB9468D00B459EF /* JSPatch */,
 				DE94AE0C1AF246BF00E461D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -342,6 +387,7 @@
 			children = (
 				DE94AE0B1AF246BF00E461D4 /* JSPatchDemo.app */,
 				DE94AE241AF246C000E461D4 /* JSPatchDemoTests.xctest */,
+				263119EE1CB9468D00B459EF /* JSPatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,7 +433,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		263119EB1CB9468D00B459EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263119F11CB9468D00B459EF /* JSPatch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		263119ED1CB9468D00B459EF /* JSPatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263119F91CB9468D00B459EF /* Build configuration list for PBXNativeTarget "JSPatch" */;
+			buildPhases = (
+				263119E91CB9468D00B459EF /* Sources */,
+				263119EA1CB9468D00B459EF /* Frameworks */,
+				263119EB1CB9468D00B459EF /* Headers */,
+				263119EC1CB9468D00B459EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSPatch;
+			productName = JSPatch;
+			productReference = 263119EE1CB9468D00B459EF /* JSPatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		DE94AE0A1AF246BF00E461D4 /* JSPatchDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE94AE2E1AF246C000E461D4 /* Build configuration list for PBXNativeTarget "JSPatchDemo" */;
@@ -395,10 +470,12 @@
 				DE94AE071AF246BF00E461D4 /* Sources */,
 				DE94AE081AF246BF00E461D4 /* Frameworks */,
 				DE94AE091AF246BF00E461D4 /* Resources */,
+				263119FA1CB9468D00B459EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				263119F41CB9468D00B459EF /* PBXTargetDependency */,
 			);
 			name = JSPatchDemo;
 			productName = JSPatch;
@@ -432,6 +509,9 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = bang;
 				TargetAttributes = {
+					263119ED1CB9468D00B459EF = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					DE94AE0A1AF246BF00E461D4 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -456,11 +536,19 @@
 			targets = (
 				DE94AE0A1AF246BF00E461D4 /* JSPatchDemo */,
 				DE94AE231AF246C000E461D4 /* JSPatchTests */,
+				263119ED1CB9468D00B459EF /* JSPatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		263119EC1CB9468D00B459EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94AE091AF246BF00E461D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,6 +580,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		263119E91CB9468D00B459EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94AE071AF246BF00E461D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,6 +640,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		263119F41CB9468D00B459EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 263119ED1CB9468D00B459EF /* JSPatch */;
+			targetProxy = 263119F31CB9468D00B459EF /* PBXContainerItemProxy */;
+		};
 		DE94AE261AF246C000E461D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DE94AE0A1AF246BF00E461D4 /* JSPatchDemo */;
@@ -553,6 +653,54 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		263119F71CB9468D00B459EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = JSPatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JSPatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		263119F81CB9468D00B459EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = JSPatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.JSPatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		DE94AE2C1AF246C000E461D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -695,6 +843,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		263119F91CB9468D00B459EF /* Build configuration list for PBXNativeTarget "JSPatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263119F71CB9468D00B459EF /* Debug */,
+				263119F81CB9468D00B459EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DE94AE061AF246BF00E461D4 /* Build configuration list for PBXProject "JSPatchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
